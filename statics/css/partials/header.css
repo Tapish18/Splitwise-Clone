@@ -1,0 +1,6 @@
+#nav-bar{
+    display:flex;
+    background-color: lightblue;
+    height: 100px;
+    width : 100%
+}
