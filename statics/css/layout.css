@@ -1,5 +1,6 @@
 #page-container{
-    min-height: 80%;
+    min-height: 625px;
     height: auto;
     width: 100%;
+    background-color: #C5CBE3;
 }

@@ -1,0 +1,26 @@
+#sign-in-form{
+    padding-top: 40px;
+    margin: 10px;
+    position: relative;
+    left: 35%;
+    display: inline-block;
+    width: 30%;
+    /* height: 500px; */
+}
+
+#page-heading{
+    margin: 20px;
+    text-align: center;
+}
+
+
+.no-border{
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid lightgray;
+}
+
+
+.margin-20{
+    margin: 20px;
+}

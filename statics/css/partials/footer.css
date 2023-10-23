@@ -1,8 +1,14 @@
 #footer{
-    height: 150px;
+    padding-top: 10px;
+    height: 120px;
     width: 100%;
-    background-color: black;
-    color: white;
+    background-color: #1F2833;
+    color: #C5C6C7;
     text-align: center;
 
+}
+
+#footer-heading{
+    font-weight: 500;
+    font-size: 2rem;
 }
