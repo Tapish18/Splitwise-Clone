@@ -1,5 +1,5 @@
 #sign-in-form{
-    padding-top: 40px;
+    padding-top: 20px;
     margin: 10px;
     position: relative;
     left: 35%;
@@ -9,8 +9,8 @@
 }
 
 #page-heading{
-    margin: 20px;
-    text-align: center;
+    margin: 30px;
+    text-align: center;    
 }
 
 

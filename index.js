@@ -4,6 +4,7 @@ const express = require("express")
 const path = require("path")
 const router = require("./routes/index") 
 const expressLayouts = require("express-ejs-layouts")
+const mongoose = require("./config/mongoose")
 
 
 const app = express()

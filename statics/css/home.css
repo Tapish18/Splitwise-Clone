@@ -1,0 +1,16 @@
+#outer-div{
+    display : relative;
+    width: 100%;
+    height: 90vh;
+}
+
+
+#homepage-photo{
+    position: absolute;
+    right: 0%;
+    display: inline-block;
+    width: 40%;
+    height: inherit;
+    background-image: url("../images/homepage-photo.jpg");
+    background-size: cover;
+}
