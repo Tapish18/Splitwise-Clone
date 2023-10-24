@@ -21,7 +21,7 @@ module.exports.createUser = async function(req,res){
             let createdUser = await User.create(req.body)
             if(createdUser){
                 console.log("User created Successfully : ",createdUser);
-                return res.redirect("back");
+                return res.redirect("/");
             }
 
         }
