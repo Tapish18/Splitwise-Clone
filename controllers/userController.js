@@ -1,5 +1,6 @@
+const passport = require("passport");
 const User = require("../models/user")
-
+const jwt = require("jsonwebtoken")
 module.exports.signUp = function(req,res){
     return res.render("sign-up.ejs",{
         title : "Splitwise | Sign Up"
@@ -42,9 +43,32 @@ module.exports.authenticate = async function(req,res){
             return res.redirect("back")
         }
         console.log("User Logged In successfully : ",fetchedUser)
-        return res.redirect("/")
+
+        const token = jwt.sign(fetchedUser.toJSON(),process.env.JWT_SECRET,{expiresIn : `${60 * 60 * 1000}`})
+
+        res.cookie("Userid",fetchedUser._id);
+        res.cookie("jwt",token,{ secure: false });
+        return res.redirect("/user/profile")
     }catch(err){
         console.log("Error Occurred : ",err)
-        return res.redirect("back");
+        return res.redirect("/");
     }
 }
+
+module.exports.signOut = async function(req,res){
+    if(res && res.cookie){
+        res.clearCookie("jwt")
+        res.clearCookie("Userid")
+
+    }
+    return res.redirect("/");
+}
+
+module.exports.showProfile = function(req,res){
+    res.locals.user = req.user;
+    return res.render("profile.ejs",{
+        title : "Splitwise | My Profile"
+    })
+}
+
+

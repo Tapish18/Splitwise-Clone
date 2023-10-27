@@ -4,6 +4,52 @@
     height: 90vh;
 }
 
+#inner-div{
+    display: inline-block;
+    position: relative;
+    width: 60% ;
+    height: inherit;
+}
+
+#page-heading{
+    /* display: inline-block; */
+    height: auto;
+    /* position: absolute; */
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15%;
+    /* top: 15%;
+    left: 30%; */
+}
+
+#sign-in-form{
+    display: inline-block;
+    position: absolute;
+    height: auto;
+    /* border: 2px dashed white; */
+    left: 30%;
+    top: 15%;
+    width: 42.5%;
+
+}
+
+
+#create-user{
+    font-weight: 400;
+    margin-top: 10%;
+    text-align: center;
+}
+
+#social-authentication{
+    position: relative;
+    margin-top: 4%;
+    text-align: center;
+    width: 100%;
+    font-weight: 600;
+}
+
 
 #homepage-photo{
     position: absolute;

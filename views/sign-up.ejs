@@ -11,7 +11,7 @@
         </h2>
     </div>
     <div id="sign-in-form">
-        <form method="post" action="/user/create-user" id="form1">
+        <form method="post" action="/user/create-user" id="form1" enctype="multipart/form-data">
           <div class="mb-3 margin-20">
             <input type="text" class="form-control no-border" name="username" aria-describedby="emailHelp" placeholder="Enter Your Username">
           </div>
@@ -23,6 +23,11 @@
             <div class="mb-3 margin-20">
               <input type="password" class="form-control no-border" name="password" placeholder="Enter Your Password">
             </div>
+
+            <div class="mb-3 margin-20">
+              <input type="file" class="form-control no-border" name="avatar" aria-describedby="emailHelp" placeholder="Upload Photograph">
+            </div>
+
             <div class="text-center" style="margin-top: 35px;">
               <button type="submit" class="btn  btn-outline-primary btn-lg text-center" style="width: 50%;">Sign Up</button>
             </div>

@@ -4,6 +4,45 @@
 
 <body>
     <div id="outer-div">
+        <div id="inner-div">
+            <div id="sign-in-form">
+                <div id="page-heading">
+                    Enter Your Details
+                </div>
+
+                <form method="post" action="/user/authenticate" id="form1">
+              
+    
+                    <div class="mb-3 margin-20">
+                      <input type="email" class="form-control no-border" name="email" aria-describedby="emailHelp" placeholder="Enter Your Email">
+                    </div>
+                    
+                    <div class="mb-3 margin-20">
+                      <input type="password" class="form-control no-border" name="password" placeholder="Enter Your Password">
+                    </div>
+
+                    
+                    
+                    <div class="text-center" style="margin-top: 35px;">
+                      <button type="submit" class="btn  btn-outline-primary btn-lg text-center" style="width: 50%;">Sign In</button>
+                    </div>
+                </form>
+                <div id="create-user">
+                    New to the plattform?
+                    <a style= "text-decoration: underline;
+                    color: white;" href="/user/sign-up">Create an account</a>
+                </div>
+                <div id="social-authentication">
+                    OR
+                    <div class="col-md-6" style="position: absolute; left: 25%; margin-top: 1%; background-color: black;">
+                        <a class="btn btn-outline-dark" href="/users/googleauth" role="button" style="text-transform:none; color: white;">
+                        <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                        Login with Google
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="homepage-photo">
     
         </div>

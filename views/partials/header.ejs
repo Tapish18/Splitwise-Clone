@@ -12,12 +12,25 @@
             </div>
         </div>
         <div id="right-section">
-            <div id="sign-in">
-                <a href="/user/sign-up">Sign Up</a>
-            </div>
-            <div id="sign-out">
-                <a href="/user/sign-in">Sign In</a>
-            </div>
+            <% if(!locals.user) {%>
+                <div id="sign-up">
+                    <a href="/user/sign-up">
+                        Sign Up
+                    </a>
+                </div>
+            <%} %>
+
+            <% if(locals.user) {%>
+                <div id="sign-up">
+                    <a href="/user/my-profile">
+                        <%=locals.user.username %>
+                    </a>
+                </div>
+
+                <div id="sign-out">
+                    <a href="/user/sign-out">Sign Out</a>
+                </div>
+            <%} %>
         </div>
     </div>
 </body>
