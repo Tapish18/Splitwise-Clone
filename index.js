@@ -23,7 +23,7 @@ app.use(express.urlencoded({extended:true})) //body parser
 app.use(cookieParser());
 
 app.use(passport.initialize())
-app.use(passport.setAuthenticatedUser);
+// app.use(passport.setAuthenticatedUser);
 
 app.use("/",router);
 

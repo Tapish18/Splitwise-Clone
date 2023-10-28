@@ -1,6 +1,8 @@
 const passport = require("passport");
 const User = require("../models/user")
 const jwt = require("jsonwebtoken")
+// const multer = require("multer");
+
 module.exports.signUp = function(req,res){
     return res.render("sign-up.ejs",{
         title : "Splitwise | Sign Up"
@@ -15,18 +17,28 @@ module.exports.signIn = async function(req,res){
 
 module.exports.createUser = async function(req,res){
     try{
-        console.log(req.body)
-        let searchedUser = await User.findOne({email : req.body.email})
+        let fetchedUser = await User.findOne({email : req.body.email})
+        if(!fetchedUser){
+            console.log(req.body);
+            console.log(req.file)
 
-        if(!searchedUser){
-            let createdUser = await User.create(req.body)
-            if(createdUser){
-                console.log("User created Successfully : ",createdUser);
-                return res.redirect("/");
+            const newUser = {
+                email : req.body.email,
+                username : req.body.username,
+                password : req.body.password
             }
 
+            if(req.file){
+                newUser.avatar = req.file.path
+            }
+
+            let createdUser = await User.create(newUser);
+            if(createdUser){
+                console.log("New User Created Successfully : ",createdUser);
+                return res.redirect("/")
+            }
         }
-        console.log("Username with this email already exists");
+        console.log("User already exists with this email");
         return res.redirect("back");
     }catch(err){
         console.log("Error Occurred : ",err);
