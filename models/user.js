@@ -28,7 +28,7 @@ const userSchema = new mongoose.Schema({
 })
 
 
-// userSchema.statics.AVATAR_PATH = "/uploads/users/avatars"
+userSchema.statics.AVATAR_PATH = "/uploads/users/avatars"
 userSchema.plugin(encrypt, {secret:process.env.SECRET , encryptedFields : ["password"]})
 
 

@@ -29,7 +29,7 @@ module.exports.createUser = async function(req,res){
             }
 
             if(req.file){
-                newUser.avatar = req.file.path
+                newUser.avatar = User.AVATAR_PATH + "/" + req.file.filename;
             }
 
             let createdUser = await User.create(newUser);

@@ -1,0 +1,30 @@
+.split-section{
+    display: inline-block;
+    width: 30%;
+    height: auto;
+    min-height: 80vh;
+    border-right: 2px solid white;
+}
+
+#friends-section{
+    position: relative;
+    
+}
+
+#navigation-links{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    min-height: 300px;
+    width: 45%;
+    border: 2px solid red;
+    right: 0%;
+    padding: 5px;
+}
+
+.modify-anchors{
+    text-decoration: none;
+    color: rgb(76, 77, 80);
+    font-weight: 500;
+}

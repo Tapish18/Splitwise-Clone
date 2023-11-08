@@ -9,6 +9,7 @@ const encrypt = require("mongoose-encryption");
 const cookieParser = require("cookie-parser");
 const passport = require("passport")
 const PassportJWT = require("./config/passportJWT");
+const passportGoogleOauth = require("./config/passport-google-oauth")
 const customMiddleware = require("./config/middleware");
 
 
@@ -19,6 +20,7 @@ app.set("view engine","ejs")
 app.set("views" , path.join(__dirname,"views"));
 app.use(expressLayouts);
 app.use(express.static("statics"));
+app.use("/uploads",express.static("./uploads"))
 app.use(express.urlencoded({extended:true})) //body parser
 app.use(cookieParser());
 
